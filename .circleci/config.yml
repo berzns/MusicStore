@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: berzns:ubuntunetcore
+      - image: berzns/ubuntunetcore:v1
     steps:
       - checkout
       - run:
