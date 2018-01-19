@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  #build:
     docker:
       - image: berzns/ubuntunetcore:v1
     steps:
@@ -14,3 +14,10 @@ jobs:
       - run:
           name: Build Solution
           command: ./build.sh
+  deploy:
+    docker:
+      - image: microsoft/azure-cli
+    steps:
+      - run:
+        name: Authenticate
+        command: az login --service-principal -t $TENANT -u $USER -p $SECRET
