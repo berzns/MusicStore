@@ -19,8 +19,8 @@ jobs:
       - image: microsoft/azure-cli
     steps:
       - run:
-        name: Authenticate
-        command: az login --service-principal -t $TENANT -u $USER -p $SECRET
+          name: Authenticate
+          command: az login --service-principal -t $TENANT -u $USER -p $SECRET
 
 workflows:
   version: 2
