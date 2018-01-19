@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  #build:
+  build:
     docker:
       - image: berzns/ubuntunetcore:v1
     steps:
@@ -11,9 +11,9 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
-      - run:
-          name: Build Solution
-          command: ./build.sh
+      #- run:
+          #name: Build Solution
+          #command: ./build.sh
   deploy:
     docker:
       - image: microsoft/azure-cli
